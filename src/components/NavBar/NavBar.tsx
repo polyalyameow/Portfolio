@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import { Link } from "react-router-dom";
 
 import Tooltip from '@mui/material/Tooltip';
 
@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%', height: '10%', marginTop: 3 ,border: "2px solid red"}}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '90%', height: '10%', marginTop: 3}}>
         <Box sx={{alignSelf: "center"}}>
           <Typography variant="h1" component="h1">&#62;&#95;Polyalya</Typography>
         </Box>
@@ -26,13 +26,13 @@ const NavBar = () => {
           {show && 
           <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
           <Tooltip title="Home" placement="bottom">
-            <HomeOutlinedIcon sx={{fontSize: 50, marginLeft: 4, color: "#533638"}}/>
+            <Link to="/"><HomeOutlinedIcon sx={{fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
           </Tooltip>
           <Tooltip title="Projects" placement="bottom">
-          <HomeRepairServiceOutlinedIcon sx={{fontSize: 50, marginLeft: 4, color: "#533638"}}/>
+          <Link to="/projects"><HomeRepairServiceOutlinedIcon sx={{fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
         </Tooltip>
         <Tooltip title="Contacts" placement="bottom">
-          <MailOutlinedIcon sx={{fontSize: 50, color: "#533638"}}/>
+          <Link to="/contacts"><MailOutlinedIcon sx={{fontSize: 50, color: "#533638"}}/></Link>
         </Tooltip>
         </Box>
           }

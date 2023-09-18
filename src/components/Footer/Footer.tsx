@@ -10,12 +10,14 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
 
 import Link from '@mui/material/Link';
+import { Link as RouterLink} from "react-router-dom";
+
 
 const Footer = () => {
   return (
     <>
       <Box sx={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
-        <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%", border: '2px solid black'}}>
+        <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%"}}>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon sx={{}}>
                 <Link href="https://github.com/polyalyameow?tab=repositories" underline="none" target="_blank" rel="noopener"><GitHubIcon sx={{color: "#533638", fontSize: "30px"}}></GitHubIcon></Link>
@@ -33,7 +35,7 @@ const Footer = () => {
             </ListItem>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon>
-                    <MailIcon sx={{color: "#533638", fontSize: "30px"}}/>
+                <Link component={RouterLink} to="/contacts"><MailIcon sx={{color: "#533638", fontSize: "30px"}}/></Link>
                 </ListItemIcon>
             </ListItem>
         </List>
