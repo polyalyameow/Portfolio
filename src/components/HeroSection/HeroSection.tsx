@@ -9,7 +9,7 @@ import Footer from '../Footer/Footer';
 
 const HeroSection = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', width: "85%", border: "2px solid purple"}}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', width: "85%", alignItems: 'center', justifyContent: 'space-between', border: "2px solid purple"}}>
      <NavBar/>
      <Content />
      <Footer/>

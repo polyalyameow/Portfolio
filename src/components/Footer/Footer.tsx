@@ -13,8 +13,8 @@ const Footer = () => {
   return (
     <>
       <Box sx={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
-        <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "20%", border: '2px solid black'}}>
-            <ListItem sx={{ width: "20%", border: "2px solid orange"}}>
+        <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%", border: '2px solid black'}}>
+            <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon sx={{}}>
                     <GitHubIcon sx={{color: "#533638", fontSize: "30px"}}/>
                 </ListItemIcon>
