@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 
+
 import Tooltip from '@mui/material/Tooltip';
 
-import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
+import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import HomeRepairServiceOutlinedIcon from '@mui/icons-material/HomeRepairServiceOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
@@ -21,7 +22,7 @@ const NavBar = () => {
         </Box>
         
         <Box sx={{ display: 'flex', flexDirection: 'row-reverse', alignSelf: "center"}}>
-          <ViewHeadlineIcon sx={{fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></ViewHeadlineIcon>
+          <MenuIcon sx={{fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
           {show && 
           <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
           <Tooltip title="Home" placement="bottom">

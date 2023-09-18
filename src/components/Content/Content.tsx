@@ -1,12 +1,18 @@
 import React from 'react'
-import avatar from "../../../public/images/avatar.png"
+import avatar from "../Images/avatar.png"
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
 
+import "./Content.css"
+
+
+
 const Content = () => {
+
   return (
+    
     <Box sx={{ display: "flex", flexDirection:"column", alignItems:"center"}}>
     <Box sx={{display: "flex", flexDirection:"row-reverse", justifyContent:"center", width: "80%", paddingTop: 5}}>
         <Avatar alt="Polyalya"
@@ -19,9 +25,10 @@ const Content = () => {
         </Box>
     
     </Box>
-    <Box sx={{width: "40%", marginTop: 3, paddingLeft: 5}}>
-        <Typography variant="h5" component="h5" align="right">Follow my journey from book nerd to programming geek.</Typography>
-    </Box>
+    <Box sx={{width: "45%", marginTop: 3, paddingLeft: 5}}>
+        <Typography variant="h5" component="h5" align="left">Follow my journey from book nerd to programming geek<span className="blink">&#95;</span></Typography>
+        
+        </Box>
     </Box>
   )
 }
