@@ -16,7 +16,7 @@ import { Link as RouterLink} from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <Box sx={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
+      <Box sx={{display:'flex', flexDirection: 'row', justifyContent: 'center', marginBottom: 2}}>
         <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%"}}>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon sx={{}}>
@@ -35,7 +35,7 @@ const Footer = () => {
             </ListItem>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon>
-                <Link component={RouterLink} to="/contacts"><MailIcon sx={{color: "#533638", fontSize: "30px"}}/></Link>
+                <RouterLink to="/contacts"><MailIcon sx={{color: "#533638", fontSize: "30px"}}/></RouterLink>
                 </ListItemIcon>
             </ListItem>
         </List>
