@@ -13,7 +13,7 @@ const Content = () => {
 
   return (
     
-    <Box sx={{height: "82.8vh", display: "flex", flexDirection:"column", alignItems:"center", justifyContent: "center"}}>
+    <Box sx={{ display: "flex", flexDirection:"column", alignItems:"center", justifyContent: "center"}}>
     <Box sx={{display: "flex", flexDirection:"row-reverse", justifyContent:"center", width: "80%", paddingTop: 5}}>
         <Avatar alt="Polyalya"
         src={avatar}
