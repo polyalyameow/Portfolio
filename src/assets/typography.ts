@@ -29,8 +29,20 @@ const theme = createTheme({
       fontSize: 30,
       fontFamily: 'B612 Mono',
       color: '#533638'
+    },
+    h6: {
+      fontSize: 30,
+      fontFamily: 'Notable',
+      color: '#543336'
+    }, 
+
+    subtitle1: {
+      fontSize: 15,
+      fontFamily: 'B612 Mono',
+      color: '#67595E',
+      lineHeight: 1.2,
     }
-  },
+  }
 });
 
 export default theme;
