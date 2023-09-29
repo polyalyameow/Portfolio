@@ -35,12 +35,26 @@ const theme = createTheme({
       fontFamily: 'Notable',
       color: '#543336'
     }, 
-
     subtitle1: {
       fontSize: 15,
       fontFamily: 'B612 Mono',
       color: '#67595E',
       lineHeight: 1.2,
+    },
+    subtitle2: {
+      fontFamily: 'B612 Mono',
+      color: "white"
+    },
+    caption: {
+      fontSize: 17,
+      fontFamily: 'B612 Mono',
+      color: "white"
+    },
+    body1: {
+      fontSize: 17,
+      fontFamily: 'B612 Mono',
+      color: '#533638',
+      fontWeight: 'bold'
     }
   }
 });

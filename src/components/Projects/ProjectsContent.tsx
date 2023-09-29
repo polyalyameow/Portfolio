@@ -77,8 +77,8 @@ const ProjectsContent = () => {
                     </Box>
                     <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", width: "70%", paddingTop:"10px"}}>
                         
-                        <Button variant="contained" disabled={project.github == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => {openInNewTab(project.github)}}><GitHub/> GitHub </Button>
-                        <Button variant="contained" disabled={project.live == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => openInNewTab(project.live)}><NorthEastIcon /> Live</Button>
+                        <Button variant="contained" disabled={project.github == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => {openInNewTab(project.github)}}><GitHub/><Typography variant="subtitle2" sx={{paddingLeft:"5px"}}>GitHub</Typography></Button>
+                        <Button variant="contained" disabled={project.live == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => openInNewTab(project.live)}><NorthEastIcon /><Typography variant="subtitle2" sx={{paddingLeft:"2px"}}>Live</Typography></Button>
                     </Box>
                     
                 </CardContent>

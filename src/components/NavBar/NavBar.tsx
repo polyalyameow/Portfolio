@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '90%', height: '10%', marginTop: 4, marginBottom: 1, border: "1px solid green"}}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '90%', height: '10%', marginTop: 4, marginBottom: 1}}>
         <Box sx={{alignSelf: "center"}}>
           <Link to="/" style={{ textDecoration: 'none' }}><Typography variant="h1" component="h1" sx={{paddingTop:"10px", paddingBottom:"10px"}}>&#62;&#95;Polyalya</Typography></Link>
         </Box>
@@ -24,7 +24,7 @@ const NavBar = () => {
         <Box sx={{ display: 'flex', flexDirection: 'row-reverse', alignSelf: "center"}}>
           <MenuIcon sx={{fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
           {show && 
-          <Box sx={{ display: 'flex', flexDirection: 'row-reverse', border: "1px solid red"}}>
+          <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
           <Tooltip title="Home" placement="bottom-end">
             <Link to="/"><HomeOutlinedIcon sx={{fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
           </Tooltip>
