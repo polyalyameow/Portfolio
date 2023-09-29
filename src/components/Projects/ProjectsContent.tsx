@@ -59,7 +59,7 @@ const ProjectsContent = () => {
   >                
         {projects.map((project, id) => (
 
-            <SwiperSlide >
+            <SwiperSlide key={id}>
              <Card key={id} sx={{ width: 400, height: 550, display:"flex", flexDirection: "column", padding: "10px", borderRadius:"10px", justifyContent:"space-between", backgroundColor: "pink", border: "2px solid #543336"}}>
                 <CardMedia sx={{ height: 300, objectFit:"contain", borderRadius:"10px", border: "2px solid #543336"}} image={project.image}></CardMedia>
                 <CardContent sx={{display:"flex", flexDirection:"column",justifyContent:"space-between", alignItems:"center", maxHeight: "200px", height:"100%"}}>
@@ -86,7 +86,14 @@ const ProjectsContent = () => {
             </SwiperSlide>
             
         ))}
-      
+      <div className="slider-controler">
+          <div className="swiper-button-prev slider-arrow">
+            <div className="arrow-back-outline"></div>
+          </div>
+          <div className="swiper-button-next slider-arrow">
+            <div className="arrow-forward-outline"></div>
+          </div>
+        </div>
       </Swiper> 
     </Box>
    

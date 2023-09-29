@@ -97,48 +97,37 @@ export const skills = [{
 const Skills = () => {
   return (
     <Box sx={{width:"35%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-around", padding:"10px"}}>
-        <Typography variant="h3" component="h3">Skills</Typography>
+        <Typography sx={{mb:2}} variant="h3" component="h3">Skills</Typography>
         <Box>
             {skills.map((skill, id) => (
-                <Box key={id} sx={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", padding: "5px"}}>
-                    {skill.stack1.map((sk, is) => (
-                        <Box key={is} sx={{display:"flex", flexDirection:"row", alignItems:"center", margin: "1px", padding:"1px"}}>
+                <div key={id}>
+                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", marginBottom: "20px", paddingBottom:"10px"}}>
+                    {skill.stack1.map((sk, one) => (
+                        <Box key={one} sx={{display:"flex", flexDirection:"row", alignItems:"center", margin: "1px", padding:"1px"}}>
                         <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
                         <Typography variant="subtitle1">{sk.name}</Typography>
                         </Box>
                     ))}
                 </Box>
-            ))}
-        </Box>
-        <Box>
-            {skills.map((skill, id) => (
-                <Box key={id} sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
-                    {skill.stack2.map((sk, is) => (
-                        <Box key={is} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "1px", padding:"1px"}}>
+                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "20px", paddingBottom:"10px"}}>
+                {skill.stack2.map((sk, two) => (
+                    <Box key={two} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "1px", padding:"1px"}}>
+                    <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
+                    <Typography variant="subtitle1">{sk.name}</Typography>
+                    </Box>
+                ))}
+            </Box>
+            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "20px", pb:4}}>
+                    {skill.stack3.map((sk, three) => (
+                        <Box key={three} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "3px", padding:"5px"}}>
                         <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
                         <Typography variant="subtitle1">{sk.name}</Typography>
                         </Box>
                     ))}
-                </Box>
-            ))}
-        </Box>
-        <Box>
-            {skills.map((skill, id) => (
-                <Box key={id} sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
-                    {skill.stack3.map((sk, is) => (
-                        <Box key={is} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "3px", padding:"5px"}}>
-                        <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
-                        <Typography variant="subtitle1">{sk.name}</Typography>
-                        </Box>
-                    ))}
-                </Box>
-            ))}
-        </Box>
-        <Box sx={{width: "100%", display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap: "wrap"}}>
-            {skills.map((skill, id) => (
-                <Box key={id} sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", width:"auto", flexWrap:"wrap", marginTop:"5px"}}>
-                    {skill.learningSkills.map((sk, is) => (
-                        <Box key={is} sx={{display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
+            </Box>
+            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", width:"auto", flexWrap:"wrap", marginTop:"10px"}}>
+                    {skill.learningSkills.map((sk, four) => (
+                        <Box key={four} sx={{display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
                         <Typography variant="body1">Learning now: </Typography>
                             <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", alignItems:"center"}}>
                                 <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
@@ -147,6 +136,7 @@ const Skills = () => {
                         </Box>
                     ))}
                 </Box>
+            </div>
             ))}
         </Box>
         <Button variant='contained' sx={{width:"50%", height:"10%", marginTop:"25px", backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}}><Link style={{textDecoration: "none"}} to="" target="_blank" download><Typography variant="caption">DOWNLOAD MY CV</Typography></Link></Button>
