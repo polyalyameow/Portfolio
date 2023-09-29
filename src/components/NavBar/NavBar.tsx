@@ -10,6 +10,7 @@ import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+
 const NavBar = () => {
 
   const [show, setShow] = useState(false);

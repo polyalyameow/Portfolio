@@ -96,7 +96,7 @@ export const skills = [{
 
 const Skills = () => {
   return (
-    <Box sx={{width:"35%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-around", padding:"10px"}}>
+    <Box sx={{width:"35%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-between", padding:"10px"}}>
         <Typography sx={{mb:2}} variant="h3" component="h3">Skills</Typography>
         <Box>
             {skills.map((skill, id) => (
