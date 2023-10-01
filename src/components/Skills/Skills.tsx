@@ -96,41 +96,41 @@ export const skills = [{
 
 const Skills = () => {
   return (
-    <Box sx={{width:"35%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-between", padding:"10px"}}>
+    <Box sx={{width:"35%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"space-between", padding:"0.625rem"}}>
         <Typography sx={{mb:2}} variant="h3" component="h3">Skills</Typography>
         <Box>
             {skills.map((skill, id) => (
                 <div key={id}>
-                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", marginBottom: "20px", paddingBottom:"10px"}}>
+                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", marginBottom: "1.25rem", paddingBottom:"0.625rem"}}>
                     {skill.stack1.map((sk, one) => (
-                        <Box key={one} sx={{display:"flex", flexDirection:"row", alignItems:"center", margin: "1px", padding:"1px"}}>
-                        <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
+                        <Box key={one} sx={{display:"flex", flexDirection:"row", alignItems:"center", margin: "0.063rem", padding:"0.063rem"}}>
+                        <Avatar sx={{paddingRight:"0.125rem"}} src={sk.logo}></Avatar>
                         <Typography variant="subtitle1">{sk.name}</Typography>
                         </Box>
                     ))}
                 </Box>
-                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "20px", paddingBottom:"10px"}}>
+                <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "1.25rem", paddingBottom:"0.625rem"}}>
                 {skill.stack2.map((sk, two) => (
-                    <Box key={two} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "1px", padding:"1px"}}>
-                    <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
+                    <Box key={two} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "0.063rem", padding:"0.063rem"}}>
+                    <Avatar sx={{paddingRight:"0.125rem"}} src={sk.logo}></Avatar>
                     <Typography variant="subtitle1">{sk.name}</Typography>
                     </Box>
                 ))}
             </Box>
-            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "20px", pb:4}}>
+            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap", marginBottom: "1.25rem", pb:4}}>
                     {skill.stack3.map((sk, three) => (
-                        <Box key={three} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "3px", padding:"5px"}}>
-                        <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
+                        <Box key={three} sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", margin: "0.188rem", padding:"0.313rem"}}>
+                        <Avatar sx={{paddingRight:"0.125rem"}} src={sk.logo}></Avatar>
                         <Typography variant="subtitle1">{sk.name}</Typography>
                         </Box>
                     ))}
             </Box>
-            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", width:"auto", flexWrap:"wrap", marginTop:"10px"}}>
+            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"center", width:"auto", flexWrap:"wrap", marginTop:"0.625rem"}}>
                     {skill.learningSkills.map((sk, four) => (
                         <Box key={four} sx={{display:"flex", flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
                         <Typography variant="body1">Learning now: </Typography>
                             <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", alignItems:"center"}}>
-                                <Avatar sx={{paddingRight:"2px"}} src={sk.logo}></Avatar>
+                                <Avatar sx={{paddingRight:"0.125rem"}} src={sk.logo}></Avatar>
                                 <Typography variant="subtitle1">{sk.name}</Typography>
                             </Box>
                         </Box>
@@ -139,7 +139,7 @@ const Skills = () => {
             </div>
             ))}
         </Box>
-        <Button variant='contained' sx={{width:"50%", height:"10%", marginTop:"25px", backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}}><Link style={{textDecoration: "none"}} to="" target="_blank" download><Typography variant="caption">DOWNLOAD MY CV</Typography></Link></Button>
+        <Button variant='contained' sx={{width:"50%", height:"10%", marginTop:"1.563rem", backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}}><Link style={{textDecoration: "none"}} to="" target="_blank" download><Typography variant="caption">DOWNLOAD MY CV</Typography></Link></Button>
     </Box>
   )
 }

@@ -35,7 +35,7 @@ const ProjectsContent = () => {
   return (
 
     
-    <Box sx={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent:"center", width: "700px"}}>
+    <Box sx={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent:"center", width: "43.75rem"}}>
             <Swiper
     effect={'coverflow'}
     grabCursor={true}
@@ -60,9 +60,9 @@ const ProjectsContent = () => {
         {projects.map((project, id) => (
 
             <SwiperSlide key={id}>
-             <Card key={id} sx={{ width: 400, height: 550, display:"flex", flexDirection: "column", padding: "10px", borderRadius:"10px", justifyContent:"space-between", backgroundColor: "pink", border: "2px solid #543336"}}>
-                <CardMedia sx={{ height: 300, objectFit:"contain", borderRadius:"10px", border: "2px solid #543336"}} image={project.image}></CardMedia>
-                <CardContent sx={{display:"flex", flexDirection:"column",justifyContent:"space-between", alignItems:"center", maxHeight: "200px", height:"100%"}}>
+             <Card key={id} sx={{ width: 400, height: 550, display:"flex", flexDirection: "column", padding: "0.625rem", borderRadius:"0.625rem", justifyContent:"space-between", backgroundColor: "pink", border: "0.125rem solid #543336"}}>
+                <CardMedia sx={{ height: 300, objectFit:"contain", borderRadius:"0.625rem", border: "0.125rem solid #543336"}} image={project.image}></CardMedia>
+                <CardContent sx={{display:"flex", flexDirection:"column",justifyContent:"space-between", alignItems:"center", maxHeight: "12.5rem", height:"100%"}}>
                     <Typography variant="h6" component="h6">{project.name}</Typography>
                     <Typography variant="subtitle1" sx={{textAlign:"center"}}>{project.description}</Typography>
                     
@@ -70,15 +70,15 @@ const ProjectsContent = () => {
                         
                     { project.stack.map((st, id) => (
                         <Tooltip key={id} title={st.name} placement="bottom">
-                        <Avatar key={id} variant="square" src={st.logo} sx={{width:"30px", height:"30px", margin: "10px"}}></Avatar>
+                        <Avatar key={id} variant="square" src={st.logo} sx={{width:"1.875rem", height:"1.875rem", margin: "0.625rem"}}></Avatar>
                         </Tooltip>
                     ))
                     }
                     </Box>
-                    <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", width: "70%", paddingTop:"10px"}}>
+                    <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", width: "70%", paddingTop:"0.625rem"}}>
                         
-                        <Button variant="contained" disabled={project.github == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => {openInNewTab(project.github)}}><GitHub/><Typography variant="subtitle2" sx={{paddingLeft:"5px"}}>GitHub</Typography></Button>
-                        <Button variant="contained" disabled={project.live == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => openInNewTab(project.live)}><NorthEastIcon /><Typography variant="subtitle2" sx={{paddingLeft:"2px"}}>Live</Typography></Button>
+                        <Button variant="contained" disabled={project.github == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => {openInNewTab(project.github)}}><GitHub/><Typography variant="subtitle2" sx={{paddingLeft:"0.313rem"}}>GitHub</Typography></Button>
+                        <Button variant="contained" disabled={project.live == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => openInNewTab(project.live)}><NorthEastIcon /><Typography variant="subtitle2" sx={{paddingLeft:"0.125rem"}}>Live</Typography></Button>
                     </Box>
                     
                 </CardContent>

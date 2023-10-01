@@ -20,22 +20,22 @@ const Footer = () => {
         <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%"}}>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon sx={{}}>
-                <Link href="https://github.com/polyalyameow?tab=repositories" underline="none" target="_blank" rel="noopener"><GitHubIcon sx={{color: "#533638", fontSize: "30px"}}></GitHubIcon></Link>
+                <Link href="https://github.com/polyalyameow?tab=repositories" underline="none" target="_blank" rel="noopener"><GitHubIcon sx={{color: "#533638", fontSize: "1.875rem"}}></GitHubIcon></Link>
                 </ListItemIcon>
             </ListItem>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon>
-                <Link href="https://www.linkedin.com/in/polina-bass-larsson-a2b014289/?locale=sv_SE" underline="none" target="_blank" rel="noopener"><LinkedInIcon sx={{color: "#533638", fontSize: "30px"}}></LinkedInIcon></Link>
+                <Link href="https://www.linkedin.com/in/polina-bass-larsson-a2b014289/?locale=sv_SE" underline="none" target="_blank" rel="noopener"><LinkedInIcon sx={{color: "#533638", fontSize: "1.875rem"}}></LinkedInIcon></Link>
                 </ListItemIcon>
             </ListItem>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon>
-                <Link href="https://www.facebook.com/polina.bass.9" underline="none" target="_blank" rel="noopener"><FacebookIcon sx={{color: "#533638", fontSize: "30px"}}></FacebookIcon></Link>
+                <Link href="https://www.facebook.com/polina.bass.9" underline="none" target="_blank" rel="noopener"><FacebookIcon sx={{color: "#533638", fontSize: "1.875rem"}}></FacebookIcon></Link>
                 </ListItemIcon>
             </ListItem>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon>
-                <RouterLink to="/contacts"><MailIcon sx={{color: "#533638", fontSize: "30px"}}/></RouterLink>
+                <RouterLink to="/contacts"><MailIcon sx={{color: "#533638", fontSize: "1.875rem"}}/></RouterLink>
                 </ListItemIcon>
             </ListItem>
         </List>
