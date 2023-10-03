@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
+
 
 import "./Modal.css";
 
@@ -12,6 +14,7 @@ import Modal from "@mui/material/Modal";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
 
 const Contacts = () => {
+  const ref = useRef();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -19,7 +22,8 @@ const Contacts = () => {
   const [submitted, setSubmitted] = useState(false)
 
   const [user, setUser] = useState({
-    name: "",
+    firstName: "",
+    surname: "",
     email: "",
     message: "",
   });
@@ -34,30 +38,40 @@ const Contacts = () => {
   const cleanForm = () => {
     setUser(() => ({
       ...user,
-      name: "",
+      firstName: "",
+      surname: "",
       email: "",
       message: "",
     }));
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = (e) => {
     
+
+    emailjs.sendForm('service_pf1d4wq', 'template_4ep6zod', ref.current , 'YPBHBlu0p3b6jhHtz')
+    .then((result) => {
+      console.log(result.text);
+  }, (error) => {
+      console.log(error.text);
+  });
+ 
+
     console.log(user);
     setSubmitted(true)
    
-  };
+  }
 
   return (
     <>
-      <form  onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} ref={ref}>
         <Stack
           sx={{
             border: "2px solid #543336",
-            width: "500px",
+            width: "900px",
             alignItems: "center",
             justifyContent:"center",
             borderRadius: "10px",
-            p: "1rem",
+            p: "2rem",
           }}
         >
           <Typography
@@ -67,31 +81,55 @@ const Contacts = () => {
           >
             Contact Me
           </Typography>
+          <Box sx={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap"}}>
+            <Stack>
           <Box sx={{  margin: "10px auto 10px auto", width: "400px" }}>
-            <TextField
+            <TextField autoComplete="off"
             sx={{width: "100%"}}
-              autoComplete="off"
-              {...register("name", { required: true, pattern: /^[A-Za-z]+$/i })}
-              placeholder="Name"
-              value={user.name}
+              {...register("firstName", { required: true, pattern: /^[A-Za-z]+$/i })}
+              placeholder="First Name"
+              value={user.firstName}
               onChange={(e) => {
                 setUser(() => ({
                   ...user,
-                  name: e.target.value,
+                  firstName: e.target.value,
                 }));
               }}
               />
-            {errors?.name?.type === "required" && (
+            {errors?.firstName?.type === "required" && (
               <Typography>This field is required</Typography>
             )}
-            {errors?.name?.type === "pattern" && (
+            {errors?.firstName?.type === "pattern" && (
+              <Typography>Alphabetical characters only</Typography>
+            )}
+          </Box>
+          <TextField autoComplete="on" style={{ display: 'none' }}
+          id="fake-hidden-input-to-stop-google-address-lookup"></TextField>
+          <Box sx={{  margin: "10px auto 10px auto", width: "400px" }}>
+            <TextField
+            sx={{width: "100%"}}
+            autoComplete="new-off"
+              {...register("surname", { required: true, pattern: /^[A-Za-z]+$/i })}
+              placeholder="Surname"
+              value={user.surname}
+              onChange={(e) => {
+                setUser(() => ({
+                  ...user,
+                  surname: e.target.value,
+                }));
+              }}
+              />
+            {errors?.surname?.type === "required" && (
+              <Typography>This field is required</Typography>
+            )}
+            {errors?.surname?.type === "pattern" && (
               <Typography>Alphabetical characters only</Typography>
             )}
           </Box>
           <Box sx={{ margin: "10px auto 10px auto", width: "400px" }}>
             <TextField
             sx={{width: "100%"}}
-              autoComplete="new-off"
+              autoComplete="off"
               {...register("email", {
                 required: true,
                 pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
@@ -112,6 +150,10 @@ const Contacts = () => {
               <Typography>Invalid email address</Typography>
             )}
           </Box>
+          {/* <TextField autoComplete="on" style={{ display: 'none' }}
+          id="fake-hidden-input-to-stop-google-address-lookup"></TextField> */}
+          </Stack>
+          <Stack sx={{flexWrap: "wrap"}}>
           <Box sx={{ margin: "10px auto 10px auto", width: "400px" }}>
             <TextField
             sx={{width: "100%"}}
@@ -132,8 +174,6 @@ const Contacts = () => {
               <Typography>This field is required</Typography>
             )}
           </Box>
-          <TextField autoComplete="on" style={{ display: 'none' }}
-          id="fake-hidden-input-to-stop-google-address-lookup"></TextField>
           <Button
           onClick={handleOpen}
             variant="contained"
@@ -152,6 +192,8 @@ const Contacts = () => {
               SUBMIT
             </Typography>
           </Button>
+          </Stack>
+          </Box>
         </Stack>
             
         </form>
