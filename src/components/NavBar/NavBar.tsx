@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '90%', height: '10%', marginTop: 4, marginBottom: 1}}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%", height: '10%', margin: "32px auto 8px auto"}}>
         <Box sx={{alignSelf: "center"}}>
           <Link to="/" style={{ textDecoration: 'none' }}><Typography variant="h1" component="h1" sx={{paddingTop:"0.625rem", paddingBottom:"0.625rem"}}>&#62;&#95;Polyalya</Typography></Link>
         </Box>
