@@ -17,23 +17,23 @@ const NavBar = () => {
 
   return (
     <>
-      <Box sx={{'@media(max-width: 1024px)': {width : "90%"}, '@media(max-width: 912px)': {margin: 0, height: 0},  '@media(max-width: 820px)':{width: "80%", height: "150px"},  display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%", height: '10%', margin: "32px auto 8px auto"}}>
+      <Box sx={{'@media(max-width: 1024px)': {width : "90%"}, '@media(max-width: 912px)': {margin: 0, height: 0},  '@media(max-width: 820px)':{width: "85%", height: "100px"}, '@media(max-width: 540px)':{marginTop: "10px"},  display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%", height: '10%', margin: "32px auto 8px auto"}}>
         <Box sx={{alignSelf: "center"}}>
-          <Link to="/" style={{ textDecoration: 'none' }}><Typography variant="h1" component="h1" sx={{'@media(max-width: 1024px)': {fontSize : 30}, paddingTop:"0.625rem", paddingBottom:"0.625rem"}}>&#62;&#95;Polyalya</Typography></Link>
+          <Link to="/" style={{ textDecoration: 'none' }}><Typography variant="h1" component="h1" sx={{'@media(max-width: 1024px)': {fontSize : 30}, '@media(max-width: 820px)':{fontSize: 20}, paddingTop:"0.625rem", paddingBottom:"0.625rem"}}>&#62;&#95;Polyalya</Typography></Link>
         </Box>
         
         <Box sx={{ display: 'flex', flexDirection: 'row-reverse', alignSelf: "center"}}>
-          <MenuIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
+          <MenuIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 30, paddingRight: 0, paddingLeft: "22px"}, fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
           {show && 
           <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
           <Tooltip title="Home" placement="bottom-end">
-            <Link to="/"><HomeOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
+            <Link to="/"><HomeOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 30}, fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
           </Tooltip>
           <Tooltip title="Projects" placement="bottom-end">
-          <Link to="/projects"><HomeRepairServiceOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
+          <Link to="/projects"><HomeRepairServiceOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 30}, fontSize: 50, marginLeft: 4, color: "#533638"}}/></Link>
         </Tooltip>
         <Tooltip title="Contacts" placement="bottom-end">
-          <Link to="/contacts"><MailOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, fontSize: 50, color: "#533638"}}/></Link>
+          <Link to="/contacts"><MailOutlinedIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 30}, fontSize: 50, color: "#533638"}}/></Link>
         </Tooltip>
         </Box>
           }

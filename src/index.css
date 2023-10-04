@@ -34,7 +34,7 @@ body{
 
 @media(max-width: 820px){
   #root {
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: space-between;
   }
 }
