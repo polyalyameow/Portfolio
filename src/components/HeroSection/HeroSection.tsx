@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 const HeroSection = () => {
   return (
     <>
-    <Box sx={{ display: 'flex', flexDirection: 'column', width: "85%", alignItems: 'center', justifyContent: 'space-between'}}>
+    <Box sx={{display: 'flex', flexDirection: 'column', width: "85%", alignItems: 'center', justifyContent: 'space-between'}}>
      <Content />
   
     </Box>
