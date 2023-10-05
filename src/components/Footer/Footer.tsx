@@ -1,4 +1,4 @@
-import React from "react";
+
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from '@mui/material/ListItem';
@@ -16,7 +16,7 @@ import { Link as RouterLink} from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <Box sx={{'@media(max-width: 820px)':{paddingBottom:"20px"}, '@media(max-width: 768px)':{paddingBottom: 0}, '@media(max-width: 540px)':{paddingTop: "20px"},  '@media(max-width: 280px)': {width: "90%"}, display:'flex', flexDirection: 'row', justifyContent: 'center', marginBottom: 2}}>
+      <Box sx={{'@media(max-width: 820px)':{paddingBottom:"1.25rem"}, '@media(max-width: 768px)':{paddingBottom: 0}, '@media(max-width: 540px)':{paddingTop: "1.25rem"},  '@media(max-width: 280px)': {width: "90%"}, display:'flex', flexDirection: 'row', justifyContent: 'center', marginBottom: 2}}>
         <List sx={{display:'flex', flexDirection: 'row', justifyContent: 'space-between', width: "80%"}}>
             <ListItem sx={{ width: "20%"}}>
                 <ListItemIcon sx={{}}>

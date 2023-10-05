@@ -27,15 +27,3 @@ body{
   overflow: hidden;
 }
 
-/* @media(max-width: 912px){
-  #root {
-    justify-content: space-around;
-  }
-}
-
-@media(max-width: 820px){
-  #root {
-    
-    justify-content: space-between;
-  }
-} */

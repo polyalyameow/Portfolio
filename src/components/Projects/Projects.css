@@ -2,6 +2,22 @@
     width: 70% !important;
 }
 
+
+
 :root {
     --swiper-theme-color: #FFF !important;
+}
+
+@media(max-width: 414px) {
+    .swiper-wrapper{
+        width: 92% !important;
+    }
+
+    .swiper-slide{
+        width: 350px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+
 }

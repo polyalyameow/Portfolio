@@ -35,7 +35,7 @@ const ProjectsContent = () => {
   return (
 
     
-    <Box sx={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent:"center", width: "43.75rem"}}>
+    <Box sx={{'@media(max-width: 1280px)':{width:"25rem"}, display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent:"center", width: "43.75rem"}}>
             <Swiper
     effect={'coverflow'}
     grabCursor={true}
@@ -60,13 +60,13 @@ const ProjectsContent = () => {
         {projects.map((project, id) => (
 
             <SwiperSlide key={id}>
-             <Card key={id} sx={{ width: 400, height: 550, display:"flex", flexDirection: "column", padding: "0.625rem", borderRadius:"0.625rem", justifyContent:"space-between", backgroundColor: "pink", border: "0.125rem solid #543336"}}>
+             <Card key={id} sx={{'@media(max-width: 1280px)':{width: "18.75rem", height: "31.25rem"}, '@media(max-width: 540px)':{height: "36.25rem", justifyContent:"flex-start"}, width: 400, height: 550, display:"flex", flexDirection: "column", padding: "0.625rem", borderRadius:"0.625rem", justifyContent:"space-between", backgroundColor: "pink", border: "0.125rem solid #543336"}}>
                 <CardMedia sx={{ height: 300, objectFit:"contain", borderRadius:"0.625rem", border: "0.125rem solid #543336"}} image={project.image}></CardMedia>
-                <CardContent sx={{display:"flex", flexDirection:"column",justifyContent:"space-between", alignItems:"center", maxHeight: "12.5rem", height:"100%"}}>
-                    <Typography variant="h6" component="h6">{project.name}</Typography>
+                <CardContent sx={{'@media(max-width: 414px)' : {justifyContent: "flex-start"}, display:"flex", flexDirection:"column",justifyContent:"space-between", alignItems:"center", maxHeight: "12.5rem", height:"100%"}}>
+                    <Typography sx={{'@media(max-width: 540px)':{width: "100%", textAlign: "center", lineHeight: 1.3, paddingBlock: "6px"}}} variant="h6" component="h6">{project.name}</Typography>
                     <Typography variant="subtitle1" sx={{textAlign:"center"}}>{project.description}</Typography>
                     
-                    <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+                    <Box sx={{'@media(max-width: 414px)': {justifyContent:"flex-start"}, display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
                         
                     { project.stack.map((st, id) => (
                         <Tooltip key={id} title={st.name} placement="bottom">
@@ -75,7 +75,7 @@ const ProjectsContent = () => {
                     ))
                     }
                     </Box>
-                    <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", width: "70%", paddingTop:"0.625rem"}}>
+                    <Box sx={{'@media(max-width: 540px)': {width: "100%", marginBottom: "0.625rem", justifyContent:"space-around"}, display:"flex", flexDirection:"row", justifyContent:"space-between", width: "70%", paddingTop:"0.625rem"}}>
                         
                         <Button variant="contained" disabled={project.github == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => {openInNewTab(project.github)}}><GitHub/><Typography variant="subtitle2" sx={{paddingLeft:"0.313rem"}}>GitHub</Typography></Button>
                         <Button variant="contained" disabled={project.live == "disabled"} sx={{backgroundColor: "#543336", ":hover": {backgroundColor: "#67595E"}}} onClick={() => openInNewTab(project.live)}><NorthEastIcon /><Typography variant="subtitle2" sx={{paddingLeft:"0.125rem"}}>Live</Typography></Button>
