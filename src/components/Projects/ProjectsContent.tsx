@@ -52,7 +52,7 @@ const ProjectsContent = () => {
     navigation={{
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-      clickable: true,
+      // clickable: true,
     }}
     modules={[EffectCoverflow, Pagination, Navigation]}
     className="swiper_container"

@@ -45,7 +45,7 @@ const Contacts = () => {
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = () => {
     
 
     emailjs.sendForm('service_pf1d4wq', 'template_4ep6zod', ref.current , 'YPBHBlu0p3b6jhHtz')

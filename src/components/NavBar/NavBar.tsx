@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 
 import Tooltip from '@mui/material/Tooltip';
@@ -23,7 +23,7 @@ const NavBar = () => {
         </Box>
         
         <Box sx={{'@media(max-width: 414px)' : {display: "none"}, display: 'flex', flexDirection: 'row-reverse', alignSelf: "center"}}>
-          <MenuIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 40, paddingRight: 0, paddingLeft: "1.375rem"}, '@media(max-width: 540px)' :{fontSize: 32}, fontSize: 50, pl: 10, pr: 3, color: "#533638"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
+          <MenuIcon sx={{'@media(max-width: 1024px)': {fontSize : 43}, '@media(max-width: 820px)': {fontSize: 40, paddingRight: 0, paddingLeft: "1.375rem"}, '@media(max-width: 540px)' :{fontSize: 32}, fontSize: 50, pl: 10, pr: 3, color: "#533638", cursor: "pointer"}} onClick={() => setShow(prev => !prev)}></MenuIcon>
           {show && 
           <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
           <Tooltip title="Home" placement="bottom-end">

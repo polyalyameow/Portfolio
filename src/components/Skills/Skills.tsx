@@ -9,7 +9,7 @@ import {skills} from "./SkillData.tsx";
 
 const Skills = () => {
   const onButtonClick = () => {
-    fetch("../../../public/CV_BassLarsson_Polina.pdf").then((response) => {
+    fetch("/public/CV_BassLarsson_Polina.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
         const alink = document.createElement("a");
