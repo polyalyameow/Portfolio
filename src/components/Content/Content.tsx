@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 import "./Content.css";
 import avatar from "../Images/avatar.png";
 
@@ -7,6 +8,7 @@ import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+
 
 const Content = () => {
   return (
@@ -144,45 +146,51 @@ const Content = () => {
             A stereotypical bookworm and lifelong learner on my way to becoming
             a programming geek
           </Typography>
-          <Link style={{ textDecoration: "none" }} to="/projects">
-            <Button
-              sx={{
-                "@media(max-width: 1024px)": { width: "18rem" },
-                "@media(max-width: 912px)": {
-                  width: "21rem",
-                  padding: "0.4rem",
-                  alignSelf: "center",
-                },
-                "@media(max-width: 540px)": {
-                  width: "12rem",
-                  marginTop: "1rem",
-                  padding: 0,
-                },
-                "@media(max-width: 414px)": {
-                  marginTop: "2rem",
-                  width: "14rem",
-                  paddingBottom: "0.5rem",
-                },
-                width: "21.875rem",
-                padding: "0.188rem",
-                backgroundColor: "#533638",
-                color: "#FFF",
-                ":hover": { backgroundColor: "#67595E" },
-                alignSelf: "flex-end",
+          <Link className="link" style={{ textDecoration: "none", alignSelf: "flex-end"}} to="/projects" onClick={() => window.scrollTo(0, 0)}>
+          <Button
+          
+            sx={{
+              "@media(max-width: 1024px)": { width: "18rem" },
+              "@media(max-width: 912px)": {
+                width: "21rem",
+                padding: "0.4rem",
+                
+              },
+              "@media(max-width: 540px)": {
+                width: "12rem",
+                marginTop: "1rem",
+                padding: 0,
+              },
+              "@media(max-width: 414px)": {
                 marginTop: "2rem",
-              }}
-            >
+                width: "14rem",
+                paddingBottom: "0.5rem",
+              },
+              "@media(max-width: 280px)": {
+                padding: 0
+              },
+              width: "21.875rem",
+              padding: "0.188rem",
+              backgroundColor: "#533638",
+              color: "#FFF",
+              ":hover": { backgroundColor: "#67595E" },
+              
+              marginTop: "2rem",
+            }}
+          >
+           
               <Typography
                 sx={{
                   "@media(max-width: 1024px)": { fontSize: 15 },
                   "@media(max-width: 912px)": { fontSize: 20 },
-                  "@media(max-width: 540px)": { fontSize: 12, padding: 0 },
+                  "@media(max-width: 540px)": { fontSize: 13, paddingBottom: "0.5rem" },
+                  "@media(max-width: 414px)": { fontSize: 13, paddingBottom: "0" },
                   color: "white",
                 }}
               >
                 VIEW MY WORK HERE<span className="blink">_</span>
               </Typography>
-            </Button>
+          </Button>
           </Link>
         </Box>
       </Box>

@@ -19,5 +19,32 @@
         justify-content: center !important;
     }
 
+    .swiper-button-prev{
+        left: var(--swiper-navigation-sides-offset, 40px) !important;
+    }
+    .swiper-button-next{
+        right: var(--swiper-navigation-sides-offset, 40px) !important;
+    }
+}
+
+@media(max-width: 375px){
+    .swiper-button-prev{
+        display: none !important;
+    }
+
+    .swiper-button-next{
+        display: none !important;
+    }
+} 
+
+
+
+@media(max-width: 280px) {
+    .swiper-slide{
+        width: 260px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
 
 }

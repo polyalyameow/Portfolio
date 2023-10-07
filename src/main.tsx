@@ -6,6 +6,9 @@ import './index.css'
 import {ThemeProvider} from "@mui/material/styles";
 import theme from './assets/typography.ts';
 
+
+
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>

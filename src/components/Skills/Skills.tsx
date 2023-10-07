@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 
 import {skills} from "./SkillData.tsx";
 
+
 const Skills = () => {
   const onButtonClick = () => {
     fetch("CV_BassLarsson_Polina.pdf").then((response) => {
@@ -24,6 +25,7 @@ const Skills = () => {
 
 
   return (
+    <>
     <Box
       sx={{
         "@media(max-width: 1280px)": { width: "90%", padding: "1.25rem" },
@@ -254,6 +256,7 @@ const Skills = () => {
           <Typography variant="caption">DOWNLOAD MY CV</Typography>
       </Button>
     </Box>
+    </>
   );
 };
 

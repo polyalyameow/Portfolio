@@ -15,3 +15,9 @@
     visibility: hidden;
   }
 }
+
+@media(max-width: 912px) {
+  .link{
+    align-self: center !important;
+  }
+}
