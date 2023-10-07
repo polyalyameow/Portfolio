@@ -70,7 +70,13 @@ const ProjectsContent = () => {
               sx={{
                 "@media(max-width: 1280px)": {
                   width: "19rem",
-                  height: "31.25rem",
+                  height: "33rem",
+                  justifyContent: "flex-start"
+                },
+                "@media(max-width: 1024px)": {
+                  width: "19rem",
+                  height: "34rem",
+                  justifyContent: "flex-start"
                 },
                 "@media(max-width: 912px)": {
                   height: "36rem",
@@ -101,6 +107,7 @@ const ProjectsContent = () => {
             >
               <CardMedia
                 sx={{
+                  "@media(max-width: 1280px)":{height:"15rem"},
                   "@media(max-width: 820px)":{height: "18rem"},
                   "@media(max-width: 280px)": { height:"10rem" },
                   height: 300,
@@ -172,7 +179,7 @@ const ProjectsContent = () => {
                 </Box>
                 <Box
                   sx={{
-                    "@media(max-width: 820px)": {
+                    "@media(max-width: 1280px)": {
                       width: "80%"
                     },
                     "@media(max-width: 540px)": {
